@@ -1,0 +1,19 @@
+package org.jhj.myInfo.service;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+
+public class GameRecordServiceImpl implements GameRecordService {
+
+	@Override
+	public String[] doGame(String choice) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insert(GameRecordVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

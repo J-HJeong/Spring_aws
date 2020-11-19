@@ -1,0 +1,13 @@
+package org.jhj.myInfo.persistence;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+
+public class GameRecordDAOImpl implements GameRecordDAO {
+
+	@Override
+	public void insert(GameRecordVO gameRecord) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

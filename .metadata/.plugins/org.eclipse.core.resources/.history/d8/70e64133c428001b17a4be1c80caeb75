@@ -1,0 +1,7 @@
+package org.jhj.myInfo.persistence;
+
+import org.jhj.myImfo.domain.GameResultVO;
+
+public interface GameRecordDAO {
+	public void insert(GameResultVO gameRecord) throws Exception;
+}

@@ -1,0 +1,13 @@
+package org.jhj.myInfo.persistence;
+
+import org.jhj.myImfo.domain.VisitorVO;
+
+public class VisitorDAOImpl implements VisitorDAO{
+
+	@Override
+	public void insert(VisitorVO visitor) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

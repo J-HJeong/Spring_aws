@@ -1,0 +1,26 @@
+package org.jhj.myImfo.domain;
+
+public class VisitorVO {
+	private int visit_id;
+	private String visit_ip;
+	private String visit_date;
+	
+	public int getVisit_id() {
+		return visit_id;
+	}
+	public void setVisit_id(int visit_id) {
+		this.visit_id = visit_id;
+	}
+	public String getVisit_ip() {
+		return visit_ip;
+	}
+	public void setVisit_ip(String visit_ip) {
+		this.visit_ip = visit_ip;
+	}
+	public String getVisit_date() {
+		return visit_date;
+	}
+	public void setVisit_date(String visit_date) {
+		this.visit_date = visit_date;
+	}
+}

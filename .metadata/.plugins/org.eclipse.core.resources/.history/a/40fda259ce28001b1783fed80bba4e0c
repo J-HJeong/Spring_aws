@@ -1,0 +1,25 @@
+package org.jhj.myInfo.service;
+
+import org.jhj.myImfo.domain.VisitorVO;
+import org.jhj.myInfo.persistence.VisitorDAO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class VisitorServiceImpl implements VisitorService {
+
+	private static final Logger logger = LoggerFactory.getLogger(VisitorServiceImpl.class);
+	
+	@Autowired
+	private VisitorDAO dao;
+
+	public void insert(VisitorVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		dao.insert(vo);
+	}
+
+}
+
+

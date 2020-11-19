@@ -1,0 +1,25 @@
+package org.jhj.myInfo.controller;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+import org.jhj.myInfo.service.GameRecordService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class GameRecordController {
+	
+	@Autowired(required=true)
+	private GameRecordService service;
+	
+	@RequestMapping(value="/gameResult", method=RequestMethod.GET)
+	public GameRecordVO doGame(@RequestParam("choice") String choice, Model model) throws Exception{
+		String[] result = service.doGame(choice);
+		model.addAttribute("computer_choice", result[0]);
+		model.addAttribute("result", result[1]);
+		return "gameResult";
+	}
+}

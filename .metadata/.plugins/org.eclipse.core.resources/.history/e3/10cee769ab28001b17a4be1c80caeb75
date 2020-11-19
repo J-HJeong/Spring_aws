@@ -1,0 +1,100 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>About Me</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
+</head>
+
+	<body class="is-preload">
+		<!-- Wrapper-->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<article class="panel">
+							<section>
+								<div>
+									<c:choose>
+										<c:when test="${type eq 'animal'}">
+										<div class="col-4 col-6-medium col-12-small">
+											<img class="image fit" src="https://2017156036.s3.amazonaws.com/images/SeaOtter.jpg"/>
+										</div><br/>
+										<div>
+											<h2>좋아하는 동물</h2><br/>
+											<p>수달이 아닌 해달이다.</p>
+										</div>
+										</c:when>
+										
+										<c:when test="${type eq 'food'}">
+										<div class="col-4 col-6-medium col-12-small">
+											<img class="image fit" src="https://2017156036.s3.amazonaws.com/images/macaroon.jpg"/>
+										</div><br/>
+										<div>
+											<h2>좋아하는 음식</h2><br/>
+											<p>두껍지 않은 마카롱</p>
+										</div>
+										</c:when>
+										
+										<c:when test="${type eq 'hobby'}">
+										<div class="col-4 col-6-medium col-12-small">
+											<img class="image fit" src="https://2017156036.s3.amazonaws.com/images/game.jpg"/>
+										</div><br/>
+										<div>
+											<h2>취미</h2><br/>
+											<p>게임</p>
+										</div>
+										</c:when>
+										
+										<c:when test="${type eq 'moon'}">
+										<div class="col-4 col-6-medium col-12-small">
+											<img class="image fit" src="https://2017156036.s3.amazonaws.com/images/moon.jpg"/>
+										</div><br/>
+										<div>
+											<h2>좋아하는 것</h2><br/>
+											<p>별, 특히 달을 좋아하여 관련 물건을 수집하고 있다.</p>
+										</div>
+										</c:when>
+										
+										<c:otherwise>
+										<div class="col-4 col-6-medium col-12-small">
+											<img class="image fit" src="https://2017156036.s3.amazonaws.com/images/yellow_detail.jpg"/>
+										</div><br/>
+										<div>
+											<h2>좋아하는 색깔</h2><br/>
+											<p>노란색 #FFCD00</p>
+										</div>
+										</c:otherwise>
+									</c:choose>
+									<div align="center">
+										<h1>${result.result}</h1></br></br>
+										<input type="button" value="다시하기" onclick="history.go(-1)"/>
+									</div>
+								</div>
+							</section>
+						</article>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/browser.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/breakpoints.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/main.js"></script>
+
+	</body>
+</html>

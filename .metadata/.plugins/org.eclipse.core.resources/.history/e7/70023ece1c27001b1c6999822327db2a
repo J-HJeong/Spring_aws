@@ -1,0 +1,5 @@
+package org.jhj.myInfo.persistence;
+
+public interface GameRecordDAO {
+
+}

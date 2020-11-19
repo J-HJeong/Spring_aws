@@ -1,0 +1,5 @@
+package org.jhj.myInfo.service;
+
+public interface S3Service {
+
+}

@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Game Record</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
+</head>
+
+	<body class="is-preload">
+		<!-- Wrapper-->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<article class="panel">
+							<section>
+						
+								<div class="row">
+									<table>
+										<thead>
+											<tr>
+												<th>선택</th><th>낸 횟수</th><th>이긴 횟수</th><th>진 횟수</th><th>비긴 횟수</th><th>승률</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>가위</th><th>${scissor.count}</th><th>${scissor.win}</th><th>${scissor.lose}</th><th>${scissor.draw}</th><th>${scissor.winRate}%</th>
+											</tr>
+											<tr>
+												<th>바위</th><th>${rock.count}</th><th>${rock.win}</th><th>${rock.lose}</th><th>${rock.draw}</th><th>${rock.winRate}%</th>
+											</tr>
+											<tr>
+												<th>보</th><th>${paper.count}</th><th>${paper.win}</th><th>${paper.lose}</th><th>${paper.draw}</th><th>${paper.winRate}%</th>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div align="center">
+									</br>
+									<input type="button" value="이전 페이지로" onclick="history.go(-1)"/>
+								</div>
+							</section>
+						</article>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/browser.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/breakpoints.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/main.js"></script>
+
+	</body>
+</html>

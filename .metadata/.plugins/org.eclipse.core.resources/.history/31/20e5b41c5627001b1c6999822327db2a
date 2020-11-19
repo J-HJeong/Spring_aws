@@ -1,0 +1,20 @@
+package org.jhj.myInfo.persistence;
+
+import org.apache.ibatis.session.SqlSession;
+import org.jhj.myImfo.domain.GameRecordVO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class GameRecordDAOImpl implements GameRecordDAO {
+
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public void insert(GameRecordVO gameRecord) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

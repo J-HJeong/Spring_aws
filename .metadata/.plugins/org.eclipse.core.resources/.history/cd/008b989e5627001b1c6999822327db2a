@@ -1,0 +1,20 @@
+package org.jhj.myInfo.persistence;
+
+import org.apache.ibatis.session.SqlSession;
+import org.jhj.myImfo.domain.VisitorVO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class VisitorDAOImpl implements VisitorDAO{
+
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public void insert(VisitorVO visitor) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

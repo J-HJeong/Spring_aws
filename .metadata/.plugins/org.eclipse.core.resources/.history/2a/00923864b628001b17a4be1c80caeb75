@@ -1,0 +1,88 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Game Record</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="${pageContext.request.contextPath}/resources/assets/css/noscript.css" /></noscript>
+</head>
+
+	<body class="is-preload">
+		<!-- Wrapper-->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<article class="panel">
+							<section>
+								<div class="row">
+									<c:choose>
+										<c:when test="${result.user_choice eq 'scissor' }">
+											<div class="col-4 col-6-medium col-12-small">
+												<a class="image fit"><img src="https://2017156036.s3.amazonaws.com/images/scissor.jpg" alt=""></a>
+											</div>
+										</c:when>
+										<c:when test="${result.user_choice eq 'rock' }">
+											<div class="col-4 col-6-medium col-12-small">
+												<a class="image fit"><img src="https://2017156036.s3.amazonaws.com/images/rock.jpg" alt=""></a>
+											</div>
+										</c:when>
+										<c:otherwise>
+											<div class="col-4 col-6-medium col-12-small">
+												<a class="image fit"><img src="https://2017156036.s3.amazonaws.com/images/paper.jpg" alt=""></a>
+											</div>
+										</c:otherwise>
+									</c:choose>
+									
+									<div class="col-4 col-6-medium col-12-small">
+										<a class="image fit"><img src="resources/images/vs.png" alt=""></a>
+									</div>
+									
+									<c:choose>
+										<c:when test="${result.computer_choice eq 'scissor'}">
+											<div class="col-4 col-6-medium col-12-small">
+												<a class="image fit"><img src="https://2017156036.s3.amazonaws.com/images/scissor.jpg" alt=""></a>
+											</div>
+										</c:when>
+										<c:when test="${result.computer_choice eq 'rock'}">
+											<div class="col-4 col-6-medium col-12-small">
+												<a class="image fit"><img src="https://2017156036.s3.amazonaws.com/images/rock.jpg" alt=""></a>
+											</div>
+										</c:when>
+										<c:otherwise>
+											<div class="col-4 col-6-medium col-12-small">
+												<a class="image fit"><img src="https://2017156036.s3.amazonaws.com/images/paper.jpg" alt=""></a>
+											</div>
+										</c:otherwise>
+									</c:choose>
+								</div>
+							</section>
+							<div align="center">
+								</br></br></br>
+								<input type="button" value="이전 페이지로" onclick="history.go(-1)"/>
+							</div>
+						</article>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/browser.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/breakpoints.min.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/util.js"></script>
+			<script src="${pageContext.request.contextPath}/resources/assets/js/main.js"></script>
+
+	</body>
+</html>

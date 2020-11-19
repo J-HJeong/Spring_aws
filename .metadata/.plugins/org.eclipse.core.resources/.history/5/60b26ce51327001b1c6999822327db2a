@@ -1,0 +1,5 @@
+package org.jhj.myImfo.domain;
+
+public class VisitorVO {
+
+}

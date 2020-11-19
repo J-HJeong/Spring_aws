@@ -1,0 +1,62 @@
+package org.jhj.myInfo.service;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.Bucket;
+import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.model.S3ObjectInputStream;
+
+public class S3ServiceImpl implements S3Service{
+
+	private String bucketName = "2017156036";
+	
+	public String getBucketName() {
+		return bucketName;
+	}
+	
+	private AmazonS3 conn;
+	
+	public S3ServiceImpl() {
+		this.conn = AmazonS3ClientBuilder.standard()
+				.withRegion(Regions.US_EAST_1).build();
+	}
+
+	public List<Bucket> getBucketList(){
+		return conn.listBuckets();
+	}
+	
+    // 파일 URL
+    public String getFileURL(String bucketName, String fileName) {
+        System.out.println("넘어오는 파일명 : "+fileName);
+        String imgName = (fileName).replace(File.separatorChar, '/');
+        return conn.generatePresignedUrl(new GeneratePresignedUrlRequest(bucketName, imgName)).toString();
+    }
+
+    // src파일 읽어오기
+    public S3ObjectInputStream getSrcFile(String bucketName, String fileName) throws IOException{
+        System.out.println("넘어오는 파일명 : "+fileName);
+        fileName = (fileName).replace(File.separatorChar, '/');
+        S3Object s3object = conn.getObject(new GetObjectRequest(bucketName, fileName)); //해당 파일 s3객체에 담기
+
+ 
+        S3ObjectInputStream objectInputStream = s3object.getObjectContent();    //s3객체를 스트림으로 변환
+
+        return objectInputStream;
+    }
+
+	@Override
+	public void download(String bucket) {
+		// TODO Auto-generated method stub
+		
+	}
+}

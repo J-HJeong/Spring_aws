@@ -1,0 +1,59 @@
+1605424591203	Rename package 'org.jhj.myInfo'
+1605424943253	Encapsulate field 'result_id'
+1605424955771	Encapsulate field 'user_choice'
+1605424960400	Encapsulate field 'result'
+1605425186629	Encapsulate field 'visit_id'
+1605425190095	Encapsulate field 'visit_ip'
+1605425193293	Encapsulate field 'visit_date'
+1605436481155	Encapsulate field 'bucketName'
+1605442922657	Delete element
+1605442950874	Delete element
+1605455721410	Delete element
+1605508542810	Rename resource 'index.html'
+1605509606246	Delete element
+1605509658484	Delete element
+1605509661332	Delete element
+1605509685114	Delete element
+1605509693158	Rename resource 'index.html'
+1605510546772	Delete element
+1605510549751	Delete element
+1605510552800	Delete element
+1605510600172	Rename resource 'index.html'
+1605512075790	Delete element
+1605512093703	Delete element
+1605512441344	Delete element
+1605517185406	Delete element
+1605527583874	Delete element
+1605594960490	Delete element
+1605594963571	Delete element
+1605594966495	Delete element
+1605594969287	Delete element
+1605594972193	Delete element
+1605594975172	Delete element
+1605594978040	Delete element
+1605594984824	Delete element
+1605594988094	Delete element
+1605594990945	Delete element
+1605594993616	Delete element
+1605594996542	Delete element
+1605596859825	Rename type 'GameRecordImpl'
+1605599035207	Change method 'doGame'
+1605599099547	Change method 'doGame'
+1605603048475	Encapsulate field 'computer_choice'
+1605610518988	Rename type 'GameRecordVO'
+1605610583249	Encapsulate field 'count'
+1605610588594	Encapsulate field 'win'
+1605610592119	Encapsulate field 'lose'
+1605610595157	Encapsulate field 'draw'
+1605615216713	Delete element
+1605615219937	Delete element
+1605615222848	Delete element
+1605615226977	Delete element
+1605615229742	Delete element
+1605615232490	Delete element
+1605615235472	Delete element
+1605615238407	Delete element
+1605615251378	Delete element
+1605615550278	Rename method 'select'
+1605615577107	Rename method 'select'
+1605616661398	Encapsulate field 'winRate'

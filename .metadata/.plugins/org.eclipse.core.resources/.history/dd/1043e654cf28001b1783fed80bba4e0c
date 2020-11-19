@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.jhj.myInfo.mappers.gameRecordMapper">
+	<insert id="insertGameRecord">
+		insert into game_record (user_choice, computer_choice, result) values
+			(#{user_choice}, #{computer_choice}, #{result})
+	</insert>
+	
+	<select id="selectScissor" resultType="org.jhj.myImfo.domain.GameRecordVO">
+		select count(*) as count, count(if(result = '승리', result, null)) as win, count(if(result = '패배', result, null)) as lose,
+			count(if(result = '무승부', result, null)) as draw from game_record where user_choice = 'scissor';
+	</select>
+
+</mapper>

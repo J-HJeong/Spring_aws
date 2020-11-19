@@ -1,0 +1,32 @@
+package org.jhj.myInfo.persistence;
+
+import org.apache.ibatis.session.SqlSession;
+import org.jhj.myImfo.domain.VisitorVO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class VisitorDAOImpl implements VisitorDAO{
+
+	@Autowired
+	private SqlSession sqlSession;
+	
+	@Override
+	public void insert(VisitorVO visitor) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	// 반복문 써서 배열 반환 할지 고민중
+	@Override
+	public int selectDay(String curdate, int dif) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int selectWeek(String curdate, int dif) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

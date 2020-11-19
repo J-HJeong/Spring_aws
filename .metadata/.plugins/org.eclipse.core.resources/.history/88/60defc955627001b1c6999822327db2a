@@ -1,0 +1,8 @@
+package org.jhj.myInfo.persistence;
+
+import org.jhj.myImfo.domain.VisitorVO;
+
+public interface VisitorDAO {
+	public void insert(VisitorVO visitor) throws Exception;
+	
+}

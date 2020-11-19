@@ -1,0 +1,8 @@
+package org.jhj.myInfo.service;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+
+public interface GameRecordService {
+	public String[] doGame(String choice) throws Exception;
+	public void insert(GameRecordVO vo) throws Exception;
+}

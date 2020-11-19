@@ -1,0 +1,36 @@
+package org.jhj.myInfo.controller;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+import org.jhj.myImfo.domain.GameResultVO;
+import org.jhj.myInfo.service.GameRecordService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class GameRecordController {
+	
+	@Autowired(required=true)
+	private GameRecordService service;
+	
+	@RequestMapping(value="/gameResult", method=RequestMethod.GET)
+	public String doGame(@RequestParam("choice") String choice, Model model) throws Exception{
+		GameResultVO result = service.doGame(choice);
+		model.addAttribute("result", result); 
+		return "gameResult";
+	}
+	
+	@RequestMapping(value="/gameRecord", method=RequestMethod.GET)
+	public String readGameRecord(Model model) throws Exception{
+		GameRecordVO scissor = service.selectScissor();
+		GameRecordVO rock = service.selectRock();
+		GameRecordVO paper = service.selectPaper();
+		model.addAttribute("scissor", scissor);
+		model.addAttribute("rock", rock);
+		model.addAttribute("paper", paper);
+		return "gameRecord";
+	}
+}

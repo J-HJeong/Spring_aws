@@ -1,0 +1,6 @@
+package org.jhj.myInfo.service;
+
+public interface GameRecordService {
+	public String[] doGame(String choice) throws Exception;
+	
+}

@@ -1,0 +1,70 @@
+package org.jhj.myInfo.service;
+
+import java.util.Scanner;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+import org.jhj.myInfo.persistence.GameRecordDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class GameRecordServiceImpl implements GameRecordService {
+
+	@Autowired
+	private GameRecordDAO dao;
+	
+	@Override
+	public GameRecordVO doGame(String choice) throws Exception {
+		// TODO Auto-generated method stub
+		
+		GameRecordVO vo = new GameRecordVO();
+		
+		// 컴퓨터 랜덤 선택
+		// 0: 가위, 1: 바위, 2: 보
+		int com = (int)(Math.random()*3);
+		if(choice.equals("scissor")) {
+			if(com == 0) {	// 가위 비김
+				vo.setResult("무승부");
+			}
+			else if(com == 1) {	// 바위 짐
+				vo.setResult("패배");
+			}
+			else {	// 보 이김
+				vo.setResult("승리");
+			}
+		}
+		else if(choice.equals("rock")) {
+			if(com == 0) {	// 가위 이김
+				vo.setResult("승리");
+			}
+			else if(com == 1) {	// 바위 비김
+				vo.setResult("무승부");
+			}
+			else {	// 보 짐
+				vo.setResult("패배");
+			}
+		}
+		else {
+			if(com == 0) {	// 가위 짐
+				vo.setResult("패배");
+			}
+			else if(com == 1) {	// 바위 이김
+				vo.setResult("승리");
+			}
+			else {	// 보 비김
+				vo.setResult("무승부");
+			}
+		}
+		
+		vo.setUser_choice(choice);
+		
+		return null;
+	}
+
+	@Override
+	public void insert(GameRecordVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		dao.insert(vo);
+	}
+
+}

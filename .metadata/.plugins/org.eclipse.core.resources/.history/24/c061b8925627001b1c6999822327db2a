@@ -1,0 +1,8 @@
+package org.jhj.myInfo.persistence;
+
+import org.jhj.myImfo.domain.GameRecordVO;
+
+public interface GameRecordDAO {
+	public void insert(GameRecordVO gameRecord) throws Exception;
+	public int selectDay(String curdate, int dif) throws Exception;
+}
